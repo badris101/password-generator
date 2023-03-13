@@ -20,7 +20,7 @@ function App() {
       <Title>Password Generator</Title>
       <PasswordResult password={password} />
       <Container>
-        <CharLength />
+        <CharLength setValue={setPasswordLength} value={passwordLength} />
         <Checkbox
           label="Include Uppercase Letters"
           value={includeUppercase}

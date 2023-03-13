@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const colors = {
+export const colors = {
   darkGunmetal: "#24232C",
   romanSilver: "#817D92",
   platinum: "#E6E5EA",
@@ -23,6 +23,10 @@ export const GlobalStyle = createGlobalStyle`
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
+    }
+
+    p {
+      margin: 0;
     }
 
     body {
