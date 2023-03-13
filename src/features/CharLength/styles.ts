@@ -9,6 +9,10 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
+
+  p {
+    font-size: 18px;
+  }
 `;
 
 export const Length = styled.span`

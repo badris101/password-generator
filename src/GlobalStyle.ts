@@ -14,7 +14,7 @@ export const colors = {
 export const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'JetBrainsMono';
-        src: local('JetBrainsMono'), url('/src/assets/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+        src: local('JetBrainsMono'), url('assets/fonts/JetBrainsMono-Bold.ttf') format('truetype');
     }
 
     *,
