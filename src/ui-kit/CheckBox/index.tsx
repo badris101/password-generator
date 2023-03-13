@@ -1,3 +1,6 @@
+import { Checkbox as CustomeCheckbox } from "@mantine/core";
+import CheckIcon from "@/assets/icons/CheckIcon";
+import { colors } from "@/GlobalStyle";
 interface IProps {
   label: string;
   value: boolean;
@@ -6,14 +9,31 @@ interface IProps {
 
 const Checkbox = ({ value, setValue, label }: IProps) => {
   return (
-    <div>
-      <input
-        type="checkbox"
-        checked={value}
-        onChange={(e) => setValue(e.target.checked)}
-      />
-      <label>{label}</label>
-    </div>
+    <CustomeCheckbox
+      icon={CheckIcon}
+      label={label}
+      checked={value}
+      onChange={(event) => setValue(event.currentTarget.checked)}
+      styles={() => ({
+        root: {
+          marginBottom: 20,
+        },
+        input: {
+          backgroundColor: colors.darkGunmetal,
+          borderRadius: 0,
+          border: `2px solid ${colors.platinum}`,
+          "&:checked": {
+            backgroundColor: colors.mintGreen,
+            borderColor: colors.mintGreen,
+          },
+        },
+        label: {
+          color: colors.platinum,
+          fontFamily: "JetBrainsMono",
+          fontSize: "18px",
+        },
+      })}
+    />
   );
 };
 
