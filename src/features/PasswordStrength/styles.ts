@@ -17,12 +17,20 @@ export const Label = styled.span`
   color: ${(props) => props.theme.colors.romanSilver};
   font-size: 18px;
   flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const Strength = styled.span`
   color: ${(props) => props.theme.colors.platinum};
   font-size: 24px;
   margin-right: 8px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const Level = styled.span<LevelProps>`

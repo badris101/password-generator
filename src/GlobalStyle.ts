@@ -40,6 +40,17 @@ export const GlobalStyle = createGlobalStyle`
         height: 100vh;
     }
 
+    #root {
+      min-width: 540px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 616px) {
+        width: 90%;
+        min-width: auto;
+      }
+    }
+
     button {
       font-family: JetBrainsMono;
     }

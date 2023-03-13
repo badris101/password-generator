@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Title, Wrapper } from "@/styles";
+import { Container, Title } from "@/styles";
 import Checkbox from "@/ui-kit/CheckBox";
 import PasswordStrength from "@/features/PasswordStrength";
 import CharLength from "@/features/CharLength";
@@ -65,7 +65,7 @@ function App() {
   };
 
   return (
-    <Wrapper>
+    <>
       <Title>Password Generator</Title>
       <PasswordResult password={password} />
       <Container>
@@ -99,7 +99,7 @@ function App() {
           GENERATE
         </Button>
       </Container>
-    </Wrapper>
+    </>
   );
 }
 
