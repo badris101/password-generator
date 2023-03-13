@@ -2,19 +2,35 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: ${(props) => props.theme.colors.darkGunmetal};
   color: ${(props) => props.theme.colors.platinum};
   padding: 19px 32px;
 
-  span {
-    display: block;
-    font-size: 32px;
+  svg {
+    cursor: pointer;
 
-    &:after {
-      content: attr(data-content);
-      color: ${(props) => props.theme.colors.romanSilver};
+    &:hover {
+      path {
+        fill: ${(props) => props.theme.colors.platinum};
+      }
     }
   }
+`;
+
+export const Password = styled.span`
+  display: block;
+  font-size: 32px;
+  flex: 1;
+
+  &:after {
+    content: attr(data-content);
+    color: ${(props) => props.theme.colors.romanSilver};
+  }
+`;
+
+export const ClipboardText = styled.span`
+  font-size: 18px;
+  color: ${(props) => props.theme.colors.mintGreen};
+  margin-right: 16px;
 `;

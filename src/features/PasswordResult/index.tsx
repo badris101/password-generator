@@ -1,15 +1,20 @@
-import { Container } from "./styles";
+import { Container, Password, ClipboardText } from "./styles";
 import CopyIcon from "@/assets/icons/CopyIcon";
+import { useClipboard } from "@mantine/hooks";
 
 interface IProps {
   password: string;
 }
 
 const PasswordResult = ({ password }: IProps) => {
+  const clipboard = useClipboard({ timeout: 1000 });
   return (
     <Container>
-      <span data-content={password === "" ? "P4$5W0rD!" : ""}>{password}</span>
-      <CopyIcon />
+      <Password data-content={password === "" ? "P4$5W0rD!" : ""}>
+        {password}
+      </Password>
+      {clipboard.copied && <ClipboardText>COPIED</ClipboardText>}
+      {password !== "" && <CopyIcon onClick={() => clipboard.copy(password)} />}
     </Container>
   );
 };
