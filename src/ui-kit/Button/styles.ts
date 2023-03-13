@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled.button`
   background-color: ${(props) => props.theme.colors.mintGreen};
@@ -23,4 +23,26 @@ export const Button = styled.button`
       fill: ${(props) => props.theme.colors.mintGreen};
     }
   }
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      cursor: not-allowed;
+      background-color: ${(props) => props.theme.colors.romanSilver};
+      color: ${(props) => props.theme.colors.platinum};
+
+      svg path {
+        fill: ${(props) => props.theme.colors.platinum};
+      }
+
+      &:hover {
+        border: 2px solid ${(props) => props.theme.colors.romanSilver};
+        background-color: transparent;
+        color: ${(props) => props.theme.colors.romanSilver};
+
+        svg path {
+          fill: ${(props) => props.theme.colors.romanSilver};
+        }
+      }
+    `}
 `;
